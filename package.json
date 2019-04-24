@@ -14,7 +14,7 @@
     "postbuild:lib": "cross-env NODE_ENV=production babel lib --out-dir lib && rimraf lib/container.jsx",
     "clean:umd": "rimraf dist/*",
     "clean:lib": "rimraf lib/*",
-    "postinstall": "npm install && npm run build"
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
