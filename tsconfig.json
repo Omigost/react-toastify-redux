@@ -5,7 +5,7 @@
     "allowSyntheticDefaultImports": true,
     "module": "es6",
     "target": "es6",
-    "jsx": "preserve",
+    "jsx": "react",
     "moduleResolution": "node",
     "lib": [
       "es2015"
