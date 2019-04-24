@@ -12,6 +12,8 @@
     ]
   },
   "include": [
+    "src/*",
+    "src/**/*",
     "src/index.ts",
     "externals.d.ts"
   ]
