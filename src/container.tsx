@@ -1,4 +1,4 @@
-import React, {ComponentClass, SFC} from 'react';
+import * as React, {ComponentClass, SFC} from 'react';
 import {toast, ToastContainer as ReactToastContainer, ToastContainerProps, ToastOptions} from 'react-toastify';
 import {connect} from "react-redux";
 import compare from './utils/compare';
