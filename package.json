@@ -7,7 +7,6 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "prebuild": "npm run test",
     "build": "npm run build:umd && npm run build:lib",
     "build:umd": "npm run clean:umd && cross-env NODE_ENV=production webpack",
     "build:lib": "npm run clean:lib && cross-env NODE_ENV=production tsc",
