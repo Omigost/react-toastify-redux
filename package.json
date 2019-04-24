@@ -31,7 +31,7 @@
   "dependencies": {
     "@types/jest": "*",
     "@types/react": "*",
-    "@types/react-redux": "*",
+    "@types/react-redux": "7.0.1",
     "awesome-typescript-loader": "*",
     "babel-cli": "*",
     "babel-jest": "*",
