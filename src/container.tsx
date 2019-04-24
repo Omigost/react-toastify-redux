@@ -45,7 +45,8 @@ export class ToastContainer extends React.Component<ToasterContainerProps> {
 
       // new toast
       if (!(toastItem.id in this._toastIds)) {
-        this._toastIds[toastItem.id as unknown as number] = (nextProps.toastComponent && !renderDefaultComponent)
+        // @ts-ignore
+        this._toastIds[toastItem.id] = (nextProps.toastComponent && !renderDefaultComponent)
           ? toast(
               React.createElement(
                 nextProps.toastComponent,
