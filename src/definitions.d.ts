@@ -1,6 +1,8 @@
 import React from 'react';
-import {ToastType, ToastContainerProps as ReactToastContainerProps} from "react-toastify";
+import {PositionOptions, ToastContainerProps as ReactToastContainerProps} from "react-toastify";
 import {ComponentClass, SFC} from "react";
+
+export type ToastType = "info" | "success" | "warning" | "error" | "default";
 
 export interface ToastBaseOptions {
   /**
@@ -20,7 +22,7 @@ export interface ToastBaseOptions {
    * Set the toast type.
    * `One of: 'info', 'success', 'warning', 'error', 'default'`
    */
-  type?: "info" | "success" | "warning" | "error" | "default";
+  type?: ToastType;
 
   /**
    * Pause the timer when the mouse hover the toast.
@@ -46,7 +48,7 @@ export interface ToastBaseOptions {
    * `One of: 'top-right', 'top-center', 'top-left', 'bottom-right', 'bottom-center', 'bottom-left'`
    * `Default: 'top-right'`
    */
-  position?: string;
+  position?: PositionOptions;
 
   /**
    * An optional css class to set for the progress bar.

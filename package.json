@@ -7,12 +7,8 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "build": "npm run build:umd && npm run build:lib",
-    "build:umd": "npm run clean:umd && cross-env NODE_ENV=production webpack",
-    "build:lib": "npm run clean:lib && cross-env NODE_ENV=production tsc",
-    "postbuild:lib": "cross-env NODE_ENV=production babel lib --out-dir lib && rimraf lib/container.jsx",
-    "clean:umd": "rimraf dist/*",
-    "clean:lib": "rimraf lib/*",
+    "build": "npm run build:umd",
+    "build:umd": "rm -r -f -d ./dist && node ./node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production ./node_modules/webpack-cli/bin/cli.js --config ./webpack.config.js -p",
     "postinstall": "npm run build"
   },
   "repository": {
@@ -80,5 +76,10 @@
         "useBabelrc": true
       }
     }
+  },
+  "dependencies": {
+    "typescript": "^3.4.5",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
   }
 }
