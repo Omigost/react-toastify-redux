@@ -13,7 +13,8 @@
     "build:lib": "npm run clean:lib && cross-env NODE_ENV=production tsc",
     "postbuild:lib": "cross-env NODE_ENV=production babel lib --out-dir lib && rimraf lib/container.jsx",
     "clean:umd": "rimraf dist/*",
-    "clean:lib": "rimraf lib/*"
+    "clean:lib": "rimraf lib/*",
+    "postinstall": "npm install && npm run build"
   },
   "repository": {
     "type": "git",
