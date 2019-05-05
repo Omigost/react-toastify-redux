@@ -9,6 +9,16 @@
     "moduleResolution": "node",
     "lib": [
       "es5", "es6", "dom"
+    ],
+    "types": [
+      "prop-types",
+      "react-dom",
+      "react-router-dom",
+      "styled-components",
+      "react-redux",
+      "node",
+      "react",
+      "react-router"
     ]
   },
   "exclude": [
